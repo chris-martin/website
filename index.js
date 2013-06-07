@@ -1,6 +1,9 @@
-$(function($) {
-  return function() {
+(function($) {
 
+  $(function() {
+
+    var updateLabel = $('body>.middle .content .status .update label');
+    var statusButtons = $('body>.middle .content .status .buttons>*');
     var textarea = $('body>.middle .status textarea');
     var form = $('body>.middle .status form');
     var feed = $('body>.middle .feed');
@@ -25,5 +28,16 @@ $(function($) {
       return false;
     });
 
-  };
+    updateLabel.attr('for', textarea.idgen());
+
+    statusButtons.each(function() {
+      $(this).click(function() {
+        statusButtons.removeClass('selected');
+        $(this).addClass('selected');
+        console.log(this);
+      });
+    });
+
+  });
+
 }(jQuery));

@@ -4,6 +4,7 @@
     <link href="index.css" rel="stylesheet" type="text/css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="jquery.autogrowtextarea.min.js"></script>
+    <script src="jquery.idgen.js"></script>
     <script src="index.js"></script>
   </head>
   <body>
@@ -21,9 +22,22 @@
       <div class="content">
         <div class="status">
           <div class="buttons">
-            <div class="update">
+            <div class="update selected">
               <span class="icon">&#x2756;</span>
-              <span class="label">Update status</span>
+              <span class="label">
+                <label>
+                  Update status
+                </label>
+              </span>
+            </div>
+            <div class="photo">
+              <span class="icon">&#9749;</span>
+              <span class="label">
+                <label class="file">
+                  Add photos
+                  <input type="file"/>
+                </label>
+              </span>
             </div>
           </div>
           <form>

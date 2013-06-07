@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+@import url(http://fonts.googleapis.com/css?family=Rufina);
 html, body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,15 @@ body, textarea {
   font-family: Verdana, sans-serif;
   color: #333;
   line-height: 1.28;
+}
+a, label.file {
+  cursor: pointer;
+}
+a:hover, label.file:hover {
+  text-decoration: underline;
+}
+label.file input {
+  display: none;
 }
 ::-webkit-input-placeholder {
   color: #999;
@@ -115,6 +125,9 @@ body>.middle .nav .entry .label {
   left: 22px;
   text-transform: capitalize;
 }
+body>.middle .nav .news .label {
+  font-weight: bold;
+}
 body>.middle .nav .news .icon {
   color: #565;
 }
@@ -134,21 +147,37 @@ body>.middle .content .status .icon {
   font-size: 17px;
   top: 0;
   left: 0;
+  cursor: default;
 }
-body>.middle .content .status .label {
+body>.middle .content .status .label,
+body>.middle .content .status .label * {
   text-transform: capitalize;
   font-weight: bold;
   top: 5px;
   left: 22px;
+  cursor: pointer;
+}
+body>.middle .content .status .label *:hover {
+  text-decoration: underline;
 }
 body>.middle .content .status .update {
-  width: 165px;
+  width: 135px;
   left: 4px;
 }
 body>.middle .content .status .update .icon {
   color: #a64;
 }
 body>.middle .content .status .update .label {
+  color: #333;
+}
+body>.middle .content .status .photo {
+  width: 135px;
+}
+body>.middle .content .status .photo .icon {
+  font-family: Rufina;
+  color: #a64;
+}
+body>.middle .content .status .photo .label {
   color: #333;
 }
 body>.middle .content .status .buttons>* {
@@ -158,6 +187,11 @@ body>.middle .content .status .buttons>* {
 }
 body>.middle .content .status .buttons>*>* {
   position: absolute;
+}
+body>.middle .content .status .buttons>*.selected .label,
+body>.middle .content .status .buttons>*.selected .label * {
+  color: black;
+  cursor: default;
 }
 body>.middle .content .status .textarea {
   padding: 4px;
